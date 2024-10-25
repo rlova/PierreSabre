@@ -31,6 +31,7 @@ public class Humain {
 	public void acheter(String bien, int prix) {
 		if (getArgent()>=prix) {
 			parler("J'ai "+ getArgent() + " sous en proche. Je vais pouvoir m'offrir " + bien + " a " + prix + " sous" );
+			perdreArgent(prix);
 		} else {
 			parler("Je n'ai plus que "+ getArgent() + " sous en proche. Je ne peux meme pas m'offrir " + bien + " a " + prix + " sous" );
 		}
