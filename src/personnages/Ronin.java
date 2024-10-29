@@ -15,7 +15,14 @@ public class Ronin extends Humain {
 		int force = this.honneur*2;
 		if (force>=adversaire.getReputation()) {
 			int argentGagner = adversaire.perdre();
-			
+			gagnerArgent(argentGagner);
+			this.honneur++;
+			parler(getNom() + " a gagne le duel contre " + adversaire.getNom());
+		} else {
+			this.honneur--;
+			adversaire.gagner(this.getArgent());
+			this.setArgent(0);
+			parler(getNom() + " a perdu le duel contre " + adversaire.getNom());
 		}
 	}
 
