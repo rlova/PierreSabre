@@ -15,6 +15,7 @@ public class Ronin extends Humain {
 	public void donner(Commercant beneficiaire) {
 		int argentDonner = (int) (this.getArgent()*0.1);
 		this.setArgent(this.getArgent()-argentDonner); 
+		parler(beneficiaire.getNom() + " prend ces " + argentDonner + " sous.");
 		beneficiaire.recevoir(argentDonner);
 	}
 }

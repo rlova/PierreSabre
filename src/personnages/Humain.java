@@ -57,20 +57,3 @@ public class Humain {
 		return "("+ nom + ") - ";
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// public class Commercant extends Humain {
-//	public Commercant(String nom, int qteArgent) {
-//super(nom,q)
