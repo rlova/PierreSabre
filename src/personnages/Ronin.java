@@ -5,10 +5,16 @@ public class Ronin extends Humain {
 	
 	public Ronin(String nom, String boisson, int argent) {
 		super(nom, boisson, argent);
-		// TODO Auto-generated constructor stub
 	}
 	
+	
+	public int getHonneur() {
+		return honneur;
+	}
+
 	public void donner(Commercant beneficiaire) {
-		return beneficiaire.getArgent()*(1-(10/100));
+		int argentDonner = (int) (this.getArgent()*0.1);
+		this.setArgent(this.getArgent()-argentDonner); 
+		beneficiaire.recevoir(argentDonner);
 	}
 }
