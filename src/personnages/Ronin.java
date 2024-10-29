@@ -7,9 +7,16 @@ public class Ronin extends Humain {
 		super(nom, boisson, argent);
 	}
 	
-	
 	public int getHonneur() {
 		return honneur;
+	}
+	
+	public void provoquer(Yakuza adversaire) {
+		int force = this.honneur*2;
+		if (force>=adversaire.getReputation()) {
+			int argentGagner = adversaire.perdre();
+			
+		}
 	}
 
 	public void donner(Commercant beneficiaire) {

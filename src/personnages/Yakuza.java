@@ -18,6 +18,19 @@ public class Yakuza extends Humain {
 		return reputation;
 	}
 	
+	public int perdre() {
+		int argentPerdu = getArgent();
+		this.setArgent(0);
+		this.reputation--;
+		parler(getNom() + "J'ai perdu mon duel et mes " + argentPerdu + " sous snif... J'ai deshonorer le clan de " + getClan());
+		return argentPerdu;
+	}
+	
+	public void gagner(int gain) {
+		this.setArgent(getArgent()+gain);
+		parler(getNom() + " Je t'ai eu petit ");
+ }
+	
 	public void extorquer(Commercant victime) {
 		parler("Tiens,Tiens, ne serait-ce pas un faible marchand qui passe par la ?");
 		parler(victime.getNom() + ", si tu tiens à ta vie donne moi ta bourse !");
