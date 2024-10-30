@@ -22,14 +22,15 @@ public class Yakuza extends Humain {
 		int argentPerdu = getArgent();
 		this.setArgent(0);
 		this.reputation--;
-		parler("J'ai perdu mon duel et mes " + argentPerdu + " sous snif... J'ai deshonorer le clan de " + getClan());
+		parler("J'ai perdu mon duel et mes " + argentPerdu + " sous snif... J'ai deshonorer le clan de " + getClan() + ".");
 		return argentPerdu;
 	}
 	
 	public void gagner(int gain) {
 		this.setArgent(getArgent()+gain);
-		parler("Je t'ai eu petit ");
- }
+		this.reputation++;
+		parler("Ce ronin pensait vraiment battre " + getNom() + " du clan " + getClan() + " ? Je l'ai depouille de ses " + gain + " sous.");
+		}
 	
 	public void extorquer(Commercant victime) {
 		parler("Tiens,Tiens, ne serait-ce pas un faible marchand qui passe par la ?");
