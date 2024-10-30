@@ -30,12 +30,5 @@ public class HistoireTP4 {
 		
 		roro.provoquer(yaku);
 	}
-
-	Tester dans la classe HistoireTP4 pour obtenir le scénario ci-dessous.
-	(Roro) - Je t'ai retrouvé vermine, tu vas payer pour ce que tu as fait à ce pauvre
-	marchand!
-	(Roro) - Je t’ai eu petit yakusa!
-	(Yaku Le Noir) - J’ai perdu mon duel et mes 45 sous, snif... J'ai déshonoré le clan de
-	Warsong
 }
 
