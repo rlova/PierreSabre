@@ -18,8 +18,8 @@ public class Ronin extends Humain {
 			int argentGagner = adversaire.perdre();
 			gagnerArgent(argentGagner);
 			this.honneur++;
-			parler(getNom() + " a gagne le duel contre " + adversaire.getNom());
-		} else {
+			gagnerArgent(argentGagner);
+			} else {
 			this.honneur--;
 			adversaire.gagner(this.getArgent());
 			this.setArgent(0);
